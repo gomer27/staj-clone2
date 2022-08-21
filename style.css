@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.header-font {
+  font-weight: 700;
+  font-size: 36px;
+}
+.header-font2 {
+  font-weight: 600;
+  font-size: 16px;
+}
+.aside-font {
+  font-weight: 700;
+  font-size: 20px;
+}
+.article2-border-size {
+  font-weight: 700;
+  font-size: 20px;
+}
+.aside2-text {
+  font-weight: 600;
+  font-size: 14px;
+}
+.article2-border-size2 {
+  font-weight: 500;
+  font-size: 14px;
+  vertical-align: middle;
+  display: table-cell;
+}
+.aside2-border-size {
+  font-weight: 700;
+  font-size: 20px;
+}
+.card1-text1 {
+  font-weight: 700;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.card1-text2 {
+  font-weight: 500;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.card2-text1 {
+  font-weight: 400;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.card2-text2 {
+  font-weight: 700;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.card2-text3 {
+  font-weight: 500;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.card2-text4 {
+  font-weight: 400;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card2-text5 {
+  font-weight: 500;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.page2-head {
+  font-weight: 700;
+  font-size: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.page2-head2 {
+  font-weight: 400;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.page2-head3 {
+  font-weight: 700;
+  font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.page2-head4 {
+  font-weight: 400;
+  font-size: 14px;
+}
+.page3-head {
+  font-weight: 700;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.border {
+  border-radius: 10px;
+}
+.img-border {
+  border: 30px solid gainsboro;
+  width: 100%;
+}
+/* c-shadow-size is my definition */
+.c-shadow {
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.card-body h5 {
+  font-size: 15px;
+}
+ol li a {
+  text-decoration: none;
+  color: #fff;
+}
+.main-img {
+  position: relative;
+  z-index: -1;
+  background-image: url("https://picsum.photos/id/16/520/380");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.img-text {
+  position: absolute;
+  bottom: 20px;
+  margin-left: 40px;
+  color: white;
+  font-size: 20px;
+  z-index: 1;
+}
+.img1 {
+  /* width: 100%;
+        height: 30%; */
+  margin-left: 0px;
+}
+
+/* .content {
+      position: absolute;
+      background-image: url(../123.jpg);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 350px;
+      opacity: 0.6;
+      z-index: -1;
+    } */
+
+aside h6 {
+  color: #fff;
+  text-align: center;
+  height: 35px;
+}
+
+.card-body h6,
+p,
+small {
+  font-size: 12px;
+}
+/* c-text-size is my definition */
+.c-text-size {
+  font-size: 18px;
+}
+/* c-bg-color(number) and c-color(number) is my definition */
+.c-bg-color1 {
+  background-color: #01473e;
+}
+.c-bg-color2 {
+  background-color: #005e53;
+}
+.c-bg-color3 {
+  background-color: #007d6e;
+}
+.c-bg-color4 {
+  background-color: #02a28f;
+}
+.c-bg-color5 {
+  background-color: #66b1a8;
+}
+c-bg-color6 {
+  background-color: #99cbc5;
+}
+.c-bg-color7 {
+  background-color: #cce5e2;
+}
+.c-bg-color8 {
+  background-color: #e6f3f1;
+}
+.c-bg-color9 {
+  background-color: white;
+}
+.c-bg-color10 {
+  background-color: #b3b3b3;
+}
+.c-color1 {
+  color: #01473e;
+}
+.c-color2 {
+  color: #005e53;
+}
+.c-color3 {
+  color: #007d6e;
+}
+.c-color4 {
+  color: #33978b;
+}
+.c-color5 {
+  color: #66b1a8;
+}
+.c-color6 {
+  color: #99cbc5;
+}
+.c-color7 {
+  color: #02a08f;
+}
+.c-color8 {
+  color: #e6f3f1;
+}
+.c-color9 {
+  color: #fff;
+}
+.c-color10 {
+  color: black;
+}
