@@ -55,13 +55,57 @@
               <a class="nav-link c-color3" href="detail.html">Eğitim</a>
               <a class="nav-link c-color3" href="detail.html">Proğramlama</a>
               <a class="nav-link c-color3" href="list.html">Teknoloji</a>
-              <a class="nav-link c-color3" href="list-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
+              <a class="nav-link c-color3">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-controls="offcanvasWithBothOptions"
+                ></i>
               </a>
             </div>
           </div>
         </div>
       </nav>
+      <div
+        class="offcanvas offcanvas-top c-bg-color1"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel"
+      >
+        <div class="offcanvas-header">
+          <h5
+            class="offcanvasTopLabel text-light mt-2"
+            id="offcanvasWithBothOptionsLabel"
+          >
+            Ömer Güneş
+          </h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Aranan kelimeyi yazın..."
+              aria-label="Input group example"
+              aria-describedby="btnGroupAddon2"
+            />
+            <div class="input-group-text" id="btnGroupAddon2">
+              <a href="#" class="c-color2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- HEADER-END -->
 
