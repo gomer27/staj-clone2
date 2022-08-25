@@ -55,7 +55,7 @@
               <a class="nav-link c-color3" href="detail.html">Eğitim</a>
               <a class="nav-link c-color3" href="detail.html">Proğramlama</a>
               <a class="nav-link c-color3" href="list.html">Teknoloji</a>
-              <a class="nav-link c-color3" href="search.html">
+              <a class="nav-link c-color3" href="#">
                 <i
                   class="fa-solid fa-magnifying-glass"
                   type="button"
@@ -68,7 +68,8 @@
           </div>
         </div>
       </nav>
-      <div
+      <form
+        action="search.html"
         class="offcanvas offcanvas-top c-bg-color1"
         data-bs-scroll="true"
         tabindex="-1"
@@ -99,13 +100,13 @@
               aria-describedby="btnGroupAddon2"
             />
             <div class="input-group-text" id="btnGroupAddon2">
-              <a href="#" class="c-color2">
+              <button type="submit" class="c-color2">
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
+              </button>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </header>
     <!-- HEADER-END -->
     <!-- MAIN-START -->
@@ -322,8 +323,8 @@
           </div>
         </article>
         <!-- ASIDE-START -->
-        <aside class="col-lg-4 d-none d-lg-block">
-          <h6 class="c-bg-color1 border1 p-1 c-shadow aside-font">
+        <aside class="col-lg-4 d-none d-lg-block d-flex align-content-between">
+          <h6 class="c-bg-color1 border1 c-shadow aside-font green-border">
             <a href="list.html" class="border-text">Popüler Haberler</a>
             <!--tam karşılıgını bulamadım-->
           </h6>
@@ -377,7 +378,7 @@
               </div>
             </div>
           </div>
-          <div class="card mb-3 c-shadow">
+          <div class="card mb-4 c-shadow">
             <div class="row g-0">
               <div class="col-4 p-1 content">
                 <img
@@ -414,7 +415,7 @@
           <div class="row">
             <div class="col-12">
               <div class="c-bg-color1 border1">
-                <h6 class="text-light aside2-border-size pt-1">
+                <h6 class="text-light aside2-border-size green-border">
                   <a href="list.html" class="border-text">Kategori</a>
                 </h6>
               </div>

@@ -6,6 +6,22 @@ body {
 * {
   font-family: "Montserrat", sans-serif;
 }
+.green-border {
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.green-border2 {
+  height: 48px;
+  align-items: center;
+  display: flex;
+}
+.green-border3 {
+  height: 48px;
+  align-items: center;
+  display: flex;
+}
 .border-text {
   color: white;
   text-decoration: none;
@@ -54,6 +70,12 @@ body {
 .aside2-border-size {
   font-weight: 700;
   font-size: 20px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: white;
+  content: var(--bs-breadcrumb-divider, "/");
 }
 .card1-text1 {
   font-weight: 700;
@@ -238,6 +260,7 @@ small {
 }
 .c-color2 {
   color: #02a08f;
+  border: none;
 }
 .c-color3 {
   color: white;
