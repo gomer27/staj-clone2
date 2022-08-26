@@ -58,6 +58,7 @@
               <a class="nav-link c-color3" href="#">
                 <i
                   class="fa-solid fa-magnifying-glass"
+                  id="navbarOpen"
                   type="button"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasWithBothOptions"
@@ -326,7 +327,7 @@
         </article>
         <!-- ASIDE-START -->
         <aside class="col-lg-4 d-none d-lg-block d-flex align-content-between">
-          <h6 class="c-bg-color1 border1 p-1 c-shadow aside-font">
+          <h6 class="c-bg-color1 border1 p-1 c-shadow aside-font green-border">
             <a href="list.html" class="border-text">Popüler Haberler</a>
             <!--tam karşılıgını bulamadım-->
           </h6>
@@ -417,7 +418,7 @@
           <div class="row">
             <div class="col-12">
               <div class="c-bg-color1 border1">
-                <h6 class="text-light aside2-border-size pt-1">
+                <h6 class="text-light aside2-border-size pt-1 green-border">
                   <a href="list.html" class="border-text">Kategori</a>
                 </h6>
               </div>
@@ -453,6 +454,7 @@
     ></script>
 
     <script>
+      document.getElementById("navbarOpen").click();
       document.getElementById("wanted3").addEventListener("click", () => {
         let wanted = document.getElementById("wanted").value;
         wanted2.innerHTML = `"${wanted}"`;
