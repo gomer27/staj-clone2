@@ -58,6 +58,7 @@
               <a class="nav-link c-color3" href="#">
                 <i
                   class="fa-solid fa-magnifying-glass"
+                  id="navbarOpen"
                   type="button"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasWithBothOptions"
@@ -85,6 +86,7 @@
           </h5>
           <button
             type="button"
+            id="closeBtn"
             class="btn-close text-reset"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
@@ -95,12 +97,13 @@
             <input
               type="text"
               class="form-control"
+              id="wanted"
               placeholder="Aranan kelimeyi yazın..."
               aria-label="Input group example"
               aria-describedby="btnGroupAddon2"
             />
             <div class="input-group-text" id="btnGroupAddon2">
-              <button type="submit" class="c-color2">
+              <button type="submit" class="c-color2" id="wanted3">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
@@ -359,5 +362,12 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.getElementById("wanted3").addEventListener("click", () => {
+        let wanted = document.getElementById("wanted").value;
+        wanted2.innerHTML = `"${wanted}"`;
+        document.getElementById("closeBtn").click();
+    </script>
   </body>
 </html>

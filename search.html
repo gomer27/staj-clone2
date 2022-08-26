@@ -58,6 +58,7 @@
               <a class="nav-link c-color3" href="#">
                 <i
                   class="fa-solid fa-magnifying-glass"
+                  id="navbarOpen"
                   type="button"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasWithBothOptions"
@@ -86,12 +87,14 @@
             type="button"
             class="btn-close text-reset"
             data-bs-dismiss="offcanvas"
+            id="closeBtn"
             aria-label="Close"
           ></button>
         </div>
         <div class="offcanvas-body">
           <div class="input-group">
             <input
+              id="wanted"
               type="text"
               class="form-control"
               placeholder="Aranan kelimeyi yazın..."
@@ -99,9 +102,9 @@
               aria-describedby="btnGroupAddon2"
             />
             <div class="input-group-text" id="btnGroupAddon2">
-              <a href="#" class="c-color2">
+              <button href="#" type="submit" id="wanted3" class="c-color2">
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -117,7 +120,8 @@
             <div class="col-lg-12 mb-2">
               <h6 class="c-text-size page3-head">
                 <strong>
-                  Menampilkan postingan yang sesuai dengan "html"
+                  Menampilkan postingan yang sesuai dengan
+                  <span id="wanted2"></span>
                 </strong>
               </h6>
             </div>
@@ -448,5 +452,14 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      document.getElementById("navbarOpen").click();
+      document.getElementById("wanted3").addEventListener("click", () => {
+        let wanted = document.getElementById("wanted").value;
+        wanted2.innerHTML = `"${wanted}"`;
+        document.getElementById("closeBtn").click();
+      });
+    </script>
   </body>
 </html>
