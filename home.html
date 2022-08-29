@@ -70,6 +70,7 @@
       </nav>
       <form
         action="search.html"
+        method="get"
         class="offcanvas offcanvas-top c-bg-color1"
         data-bs-scroll="true"
         tabindex="-1"
@@ -486,11 +487,11 @@
     ></script>
 
     <script>
-
       document.getElementById("wanted3").addEventListener("click", () => {
         let wanted = document.getElementById("wanted").value;
         wanted2.innerHTML = `"${wanted}"`;
         document.getElementById("closeBtn").click();
+      });
     </script>
   </body>
 </html>
