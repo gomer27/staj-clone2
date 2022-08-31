@@ -460,6 +460,13 @@
         wanted2.innerHTML = `"${wanted}"`;
         document.getElementById("closeBtn").click();
       });
+      var input = document.getElementById("wanted");
+      input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("wanted3").click();
+        }
+      });
     </script>
   </body>
 </html>
