@@ -55,9 +55,10 @@
               <a class="nav-link c-color3" href="detail.html">Eğitim</a>
               <a class="nav-link c-color3" href="detail.html">Proğramlama</a>
               <a class="nav-link c-color3" href="list.html">Teknoloji</a>
-              <a class="nav-link c-color3" href="search.html">
+              <a class="nav-link c-color3">
                 <i
                   class="fa-solid fa-magnifying-glass"
+                  id="navbarOpen"
                   type="button"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasWithBothOptions"
@@ -68,9 +69,7 @@
           </div>
         </div>
       </nav>
-      <form
-        action="search.html"
-        method="get"
+      <div
         class="offcanvas offcanvas-top c-bg-color1"
         data-bs-scroll="true"
         tabindex="-1"
@@ -93,23 +92,26 @@
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              id="wanted"
-              placeholder="Aranan kelimeyi yazın..."
-              aria-label="Input group example"
-              aria-describedby="btnGroupAddon2"
-            />
-            <div class="input-group-text" id="btnGroupAddon2">
-              <button type="submit" class="c-color2" id="wanted3">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
+          <form action="search.html" method="get">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                id="keywordInput"
+                placeholder="Aranan kelimeyi yazın..."
+                aria-label="Input group example"
+                aria-describedby="btnGroupAddon2"
+                required
+              />
+              <div class="input-group-text" id="btnGroupAddon2">
+                <button type="button" class="c-color2" id="searchBtn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
-      </form>
+      </div>
     </header>
     <!-- HEADER-END -->
 
@@ -487,11 +489,20 @@
     ></script>
 
     <script>
-      document.getElementById("wanted3").addEventListener("click", () => {
-        let wanted = document.getElementById("wanted").value;
-        wanted2.innerHTML = `"${wanted}"`;
-        document.getElementById("closeBtn").click();
-      });
+      // document.getElementById("searchBtn").addEventListener("click", () => {
+      //   const keyword = document.getElementById("keywordInput").value;
+      //   if (keyword) {
+      //     window.location =
+      //       window.location.origin + `/search.html?keyword=${keyword}`;
+      //   }
+      // });
+      try {
+        var urlSearchParams = new URLSearchParams(window.location.search);
+        var params = Object.fromEntries(urlSearchParams.entries());
+        var searchTerm = params.searchTerm;
+        document.getElementById("searchTermHolder").innerHTML = searchTerm;
+        document.querySelector("[name='searchTerm']").value = searchTerm;
+      } catch (error) {}
     </script>
   </body>
 </html>

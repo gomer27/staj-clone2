@@ -92,21 +92,24 @@
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div class="input-group">
-            <input
-              id="wanted"
-              type="text"
-              class="form-control"
-              placeholder="Aranan kelimeyi yazın..."
-              aria-label="Input group example"
-              aria-describedby="btnGroupAddon2"
-            />
-            <div class="input-group-text" id="btnGroupAddon2">
-              <button type="submit" id="wanted3" class="c-color2">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
+          <form action="search.html" method="get">
+            <div class="input-group">
+              <input
+                name="searchTerm"
+                type="text"
+                class="form-control"
+                placeholder="Aranan kelimeyi yazın..."
+                aria-label="Input group example"
+                aria-describedby="btnGroupAddon2"
+                required
+              />
+              <div class="input-group-text" id="btnGroupAddon2">
+                <button type="submit" class="c-color2">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </header>
@@ -115,13 +118,12 @@
     <!--CONTAINER-START -->
     <div class="container mt-5">
       <div class="row">
-        <article class="col-12 col-lg-8">
+        <article class="col-12 col-lg-8 d-none">
           <div class="row">
             <div class="col-lg-12 mb-2">
               <h6 class="c-text-size page3-head">
                 <strong>
-                  Menampilkan postingan yang sesuai dengan
-                  <span id="wanted2"></span>
+                  "<span id="searchTermHolder"></span>" terimi için sonuçlar
                 </strong>
               </h6>
             </div>
@@ -325,6 +327,13 @@
             </div>
           </div>
         </article>
+        <article class="col-12 col-lg-8">
+          <img
+            class="fa-solid fa-magnifying-glass"
+            style="display: block; height: 800px"
+          />
+          <h6>Aranan sonuç bulunamadı</h6>
+        </article>
         <!-- ASIDE-START -->
         <aside class="col-lg-4 d-none d-lg-block d-flex align-content-between">
           <h6 class="c-bg-color1 border1 p-1 c-shadow aside-font green-border">
@@ -454,19 +463,18 @@
     ></script>
 
     <script>
-      document.getElementById("navbarOpen").click();
-      document.getElementById("wanted3").addEventListener("click", () => {
-        let wanted = document.getElementById("wanted").value;
-        wanted2.innerHTML = `"${wanted}"`;
-        document.getElementById("closeBtn").click();
-      });
-      var input = document.getElementById("wanted");
-      input.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
-          event.preventDefault();
-          document.getElementById("wanted3").click();
-        }
-      });
+      // const url = new URL(window.location.href);
+      // const searchParams = url.searchParams.get("keyword");
+      // if (searchParams) {
+      //   document.getElementById("searchTermHolder").innerHTML = searchParams;
+      // }
+      try {
+        var urlSearchParams = new URLSearchParams(window.location.search);
+        var params = Object.fromEntries(urlSearchParams.entries());
+        var searchTerm = params.searchTerm;
+        document.getElementById("searchTermHolder").innerHTML = searchTerm;
+        document.querySelector("[name='searchTerm']").value = searchTerm;
+      } catch (error) {}
     </script>
   </body>
 </html>
