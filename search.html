@@ -115,7 +115,7 @@
     <!-- HEADER-END -->
     <!-- MAIN-START -->
     <!--CONTAINER-START -->
-    <div class="container mt-5">
+    <div class="container pt-5" style="min-height: calc(100vh - 139px)">
       <div class="row">
         <article class="col-12 col-lg-8">
           <div class="searchResultNotFound icon">
@@ -443,11 +443,12 @@
         <!-- ASIDE-END -->
       </div>
     </div>
+
     <!-- CONTAINER-END -->
     <!-- MAIN-END -->
 
     <!-- FOOTER START -->
-    <footer class="mt-5 p-1 c-bg-color1">
+    <footer class="p-1 c-bg-color1">
       <p class="text-light pt-3">omergunes2700@gmail.com</p>
     </footer>
     <!-- FOOTER END -->
@@ -464,35 +465,33 @@
       // if (searchParams) {
       // document.getElementById("searchTermHolder").innerHTML = searchParams;
       // }
-      try {
-        const urlSearchParams = new URLSearchParams(window.location.search);
-        const searchTerm = Object.fromEntries(
-          urlSearchParams.entries()
-        ).searchTerm;
-        const notFoundTemplateArr = document.getElementsByClassName(
-          "searchResultNotFound"
-        );
-        const searchResultRowArr =
-          document.getElementsByClassName("searchResultRow");
+      const urlSearchParams = new URLSearchParams(window.location.search);
+      const searchTerm = Object.fromEntries(
+        urlSearchParams.entries()
+      ).searchTerm;
+      const notFoundTemplateArr = document.getElementsByClassName(
+        "searchResultNotFound"
+      );
+      const searchResultRowArr =
+        document.getElementsByClassName("searchResultRow");
 
-        if (searchTerm == null || searchTerm === "") {
-          for (const el of notFoundTemplateArr) {
-            el.classList.remove("d-none");
-          }
-          for (const el of searchResultRowArr) {
-            el.classList.add("d-none");
-          }
-        } else {
-          document.getElementById("searchTermHolder").innerHTML = searchTerm;
-
-          for (const el of notFoundTemplateArr) {
-            el.classList.add("d-none");
-          }
-          for (const el of searchResultRowArr) {
-            el.classList.remove("d-none");
-          }
+      if (searchTerm == null || searchTerm === "") {
+        for (const el of notFoundTemplateArr) {
+          el.classList.remove("d-none");
         }
-      } catch (error) {}
+        for (const el of searchResultRowArr) {
+          el.classList.add("d-none");
+        }
+      } else {
+        document.getElementById("searchTermHolder").innerHTML = searchTerm;
+
+        for (const el of notFoundTemplateArr) {
+          el.classList.add("d-none");
+        }
+        for (const el of searchResultRowArr) {
+          el.classList.remove("d-none");
+        }
+      }
     </script>
   </body>
 </html>

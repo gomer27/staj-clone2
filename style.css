@@ -273,8 +273,7 @@ small {
 }
 footer {
   text-align: center;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+}
+.a {
+  min-height: calc(100vh - 742px);
 }
