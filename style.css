@@ -77,6 +77,12 @@ body {
   color: white;
   content: var(--bs-breadcrumb-divider, "/");
 }
+.icon {
+  font-size: 50px;
+  text-align: center;
+  color: #02a08f;
+}
+
 .card1-text1 {
   font-weight: 700;
   font-size: 14px;
@@ -264,4 +270,11 @@ small {
 }
 .c-color3 {
   color: white;
+}
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }

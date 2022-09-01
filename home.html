@@ -97,14 +97,13 @@
               <input
                 type="text"
                 class="form-control"
-                id="keywordInput"
+                name="searchTerm"
                 placeholder="Aranan kelimeyi yazın..."
                 aria-label="Input group example"
                 aria-describedby="btnGroupAddon2"
-                required
               />
               <div class="input-group-text" id="btnGroupAddon2">
-                <button type="button" class="c-color2" id="searchBtn">
+                <button type="submit" class="c-color2" id="wanted3">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>
@@ -489,13 +488,6 @@
     ></script>
 
     <script>
-      // document.getElementById("searchBtn").addEventListener("click", () => {
-      //   const keyword = document.getElementById("keywordInput").value;
-      //   if (keyword) {
-      //     window.location =
-      //       window.location.origin + `/search.html?keyword=${keyword}`;
-      //   }
-      // });
       try {
         var urlSearchParams = new URLSearchParams(window.location.search);
         var params = Object.fromEntries(urlSearchParams.entries());
