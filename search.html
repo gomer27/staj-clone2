@@ -53,7 +53,7 @@
                 >Ana Sayfa</a
               >
               <a class="nav-link c-color3" href="detail.html">Eğitim</a>
-              <a class="nav-link c-color3" href="detail.html">Proğramlama</a>
+              <a class="nav-link c-color3" href="detail.html">Programlama</a>
               <a class="nav-link c-color3" href="list.html">Teknoloji</a>
               <a class="nav-link c-color3" href="#">
                 <i
@@ -115,12 +115,11 @@
     <!-- HEADER-END -->
     <!-- MAIN-START -->
     <!--CONTAINER-START -->
-    <div class="container pt-5" style="min-height: calc(100vh - 139px)">
+    <div class="container pt-5 footerHeight">
       <div class="row">
-        <article class="col-12 col-lg-8">
-          <div class="searchResultNotFound icon">
-            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-            <h6>Aranan sonuç bulunamadı</h6>
+        <article class="col-12 col-lg-8 mb-5">
+          <div class="notFoundPage">
+            <img src="./img/error.jpg" class="w-100" alt="not found" />
           </div>
           <div class="row searchResultRow d-none">
             <div class="col-lg-12 mb-2">
@@ -460,36 +459,28 @@
     ></script>
 
     <script>
-      // const url = new URL(window.location.href);
-      // const searchParams = url.searchParams.get("keyword");
-      // if (searchParams) {
-      // document.getElementById("searchTermHolder").innerHTML = searchParams;
-      // }
-      const urlSearchParams = new URLSearchParams(window.location.search);
-      const searchTerm = Object.fromEntries(
-        urlSearchParams.entries()
-      ).searchTerm;
-      const notFoundTemplateArr = document.getElementsByClassName(
-        "searchResultNotFound"
-      );
-      const searchResultRowArr =
+      let urlSearchParams = new URLSearchParams(window.location.search);
+      let searchTerm = Object.fromEntries(urlSearchParams.entries()).searchTerm;
+      let notFoundTemplateArray =
+        document.getElementsByClassName("notFoundPage");
+      let searchResultRowArray =
         document.getElementsByClassName("searchResultRow");
 
       if (searchTerm == null || searchTerm === "") {
-        for (const el of notFoundTemplateArr) {
-          el.classList.remove("d-none");
+        for (let array of notFoundTemplateArray) {
+          array.classList.remove("d-none");
         }
-        for (const el of searchResultRowArr) {
-          el.classList.add("d-none");
+        for (let array of searchResultRowArray) {
+          array.classList.add("d-none");
         }
       } else {
         document.getElementById("searchTermHolder").innerHTML = searchTerm;
 
-        for (const el of notFoundTemplateArr) {
-          el.classList.add("d-none");
+        for (let array of notFoundTemplateArray) {
+          array.classList.add("d-none");
         }
-        for (const el of searchResultRowArr) {
-          el.classList.remove("d-none");
+        for (let array of searchResultRowArray) {
+          array.classList.remove("d-none");
         }
       }
     </script>

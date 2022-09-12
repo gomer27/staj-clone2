@@ -274,6 +274,6 @@ small {
 footer {
   text-align: center;
 }
-.a {
-  min-height: calc(100vh - 742px);
+.footerHeight {
+  min-height: calc(100vh - 139px);
 }
