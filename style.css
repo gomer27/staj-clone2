@@ -263,7 +263,14 @@ small {
   border-radius: 15px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
-
+.cmodal-btn {
+  display: flex;
+  justify-content: flex-start;
+}
+/* .btn1:hover {
+  opacity: 0;
+  font-size: 24px;
+} */
 /* c-text-size is my definition */
 .c-text-size {
   font-size: 18px;

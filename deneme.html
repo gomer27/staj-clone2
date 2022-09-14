@@ -120,35 +120,65 @@
 
     <!-- MAIN-START -->
     <main>
+      <button onclick="”setTimeout(cerezolustur," 1000);”>Aktif Et</button>
       <!-- CONTAINER1-START -->
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="modal fade mt-5" tabindex="-1" id="myModal">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary d-none"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+              id="openModal"
+            >
+              Launch static backdrop modal
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="staticBackdrop"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
               <div class="modal-dialog modal-dialog-centered">
-                <div class="model-content modal-img">
+                <div class="modal-content modal-img">
                   <div class="modal-header">
-                    <h5 class="model-title">Cumhuriyet Bayramı mesajı</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">
+                      Cumhuriyet Bayramı mesajı
+                    </h5>
                     <button
                       type="button"
                       class="btn-close"
                       data-bs-dismiss="modal"
-                      aria-label="kapat"
+                      aria-label="Close"
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <p>Cumhuriyet Bayramınız kutlu olsun</p>
+                    Cumhuriyet Bayramınız kutlu olsun
                   </div>
-                  <div class="modal-footer">
+                  <div class="modal-footer cmodal-btn">
                     <button
                       type="button"
-                      class="btn btn-outline-danger"
+                      class="btn btn-outline-success"
                       data-bs-dismiss="modal"
                     >
                       Kapat
                     </button>
-                    <button type="button" class="btn btn-outline-success">
-                      Onayla
+                    <button
+                      type="button"
+                      class="btn btn1 btn-outline-danger"
+                      onclick="dontShow()"
+                      data-bs-dismiss="modal"
+                    >
+                      <strong
+                        ><em><b>Onayla</b></em></strong
+                      >
                     </button>
                   </div>
                 </div>
@@ -527,10 +557,6 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script>
-      let myModel = new bootstrap.Modal(document.querySelector("#myModal"));
-      myModel.show();
-    </script>
     <script>
       const openModal = document.getElementById("openModal");
       openModal.click();
