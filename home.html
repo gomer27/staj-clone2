@@ -17,6 +17,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -117,6 +121,43 @@
     <!-- MAIN-START -->
     <main>
       <!-- CONTAINER1-START -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="modal fade mt-5" tabindex="-1" id="myModal">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="model-content modal-img">
+                  <div class="modal-header">
+                    <h5 class="model-title">Cumhuriyet Bayramı mesajı</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="kapat"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Cumhuriyet Bayramınız kutlu olsun</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-outline-danger"
+                      data-bs-dismiss="modal"
+                    >
+                      Kapat
+                    </button>
+                    <button type="button" class="btn btn-outline-success c-btn">
+                      Onayla
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="container mt-5">
         <div class="row">
           <!-- ARTICLE-START -->
@@ -486,6 +527,10 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script>
+      let myModel = new bootstrap.Modal(document.querySelector("#myModal"));
+      myModel.show();
+    </script>
 
     <script>
       try {
