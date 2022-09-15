@@ -260,6 +260,7 @@ small {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  min-height: 400px;
   border-radius: 15px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
