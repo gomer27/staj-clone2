@@ -124,33 +124,16 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-primary d-none"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-              id="openModal"
-            >
-              Launch static backdrop modal
-            </button>
-
-            <!-- Modal -->
             <div
-              class="modal fade modal-lg"
-              id="staticBackdrop"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
+              class="modal fade"
               tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true"
+              id="myModal"
+              data-bs-backdrop="static" //bu kod sayfanın herhangi yerine tıklayınca kapanmasına izin vermiyor
             >
-              <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content modal-img">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">
-                      Cumhuriyet Bayramı mesajı
-                    </h5>
+                    <h5 class="modal-title">Cumhuriyet Bayramı mesajı</h5>
                     <button
                       type="button"
                       class="btn-close"
@@ -159,14 +142,16 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    Cumhuriyet Bayramınız kutlu olsun
-                    <img src="./img/bayrak.jpg" alt="bayrak" height="24px" />
+                    <p class="cmodal-text">
+                      Cumhuriyet Bayramınız kutlu olsun
+                      <img src="./img/bayrak.jpg" alt="bayrak" height="24px" />
+                    </p>
                   </div>
                   <div class="modal-footer cmodal-btn">
                     <button
                       type="button"
                       class="btn btn-danger"
-                      style="opacity: 0.9"
+                      style="opacity: 0.8"
                       data-bs-dismiss="modal"
                     >
                       Kapat
@@ -175,7 +160,7 @@
                       type="button"
                       class="btn btn1 btn-success"
                       data-bs-dismiss="modal"
-                      style="opacity: 0.9"
+                      style="opacity: 0.8"
                     >
                       Onayla
                     </button>
@@ -556,14 +541,35 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <!-- <script>
+    <script>
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
       let myModel = new bootstrap.Modal(document.querySelector("#myModal"));
       myModel.show();
-    </script> -->
-    <script>
+    </script>
+    <!-- <script>
       const openModal = document.getElementById("openModal");
       openModal.click();
-    </script>
+    </script> -->
 
     <script>
       try {
