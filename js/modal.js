@@ -20,9 +20,9 @@ function setCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 var modalAnnouncement = document.getElementById("announcement");
-// modalAnnouncement.addEventListener("hidden.bs.modal", function (event) {
-//    setCookie("modal", "true");
-// });
+modalAnnouncement.addEventListener("hidden.bs.modal", function (event) {
+  setCookie("modal", "true");
+});
 console.log(getCookie("modal"));
 if (getCookie("modal") == "") {
   var announcement = new bootstrap.Modal(modalAnnouncement);

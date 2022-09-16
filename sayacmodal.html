@@ -24,14 +24,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- HEADER-START -->
     <header class="c-bg-color1">
       <nav class="navbar navbar-expand-lg mx-5">
         <div class="container-fluid mx-5">
-          <a class="navbar-brand c-color3 header-font" href="../html/home.html">
+          <a class="navbar-brand c-color3 header-font" href="home.html">
             Ömer Güneş
           </a>
           <button
@@ -50,19 +50,12 @@
             id="navbarNavAltMarkup"
           >
             <div class="navbar-nav header-font2">
-              <a
-                class="nav-link c-color3"
-                aria-current="page"
-                href="../html/home.html"
+              <a class="nav-link c-color3" aria-current="page" href="home.html"
                 >Ana Sayfa</a
               >
-              <a class="nav-link c-color3" href="../html/detail.html">Eğitim</a>
-              <a class="nav-link c-color3" href="../html/detail.html"
-                >Programlama</a
-              >
-              <a class="nav-link c-color3" href="../html/list.html"
-                >Teknoloji</a
-              >
+              <a class="nav-link c-color3" href="detail.html">Eğitim</a>
+              <a class="nav-link c-color3" href="detail.html">Programlama</a>
+              <a class="nav-link c-color3" href="list.html">Teknoloji</a>
               <a class="nav-link c-color3">
                 <i
                   class="fa-solid fa-magnifying-glass"
@@ -100,7 +93,7 @@
           ></button>
         </div>
         <div class="offcanvas-body">
-          <form action="../html/search.html" method="get">
+          <form action="search.html" method="get">
             <div class="input-group">
               <input
                 type="text"
@@ -153,6 +146,7 @@
                   <button
                     type="button"
                     class="btn btn-danger"
+                    id="modalClose"
                     style="opacity: 0.8"
                     data-bs-dismiss="modal"
                   >
@@ -167,6 +161,13 @@
                     Onayla
                   </button>
                 </div>
+                <div class="counter">
+                  <div id="counter"></div>
+                  <div id="warning" class="warn"></div>
+                </div>
+
+                <div id="saniye"></div>
+                <div id="uyari"></div>
               </div>
             </div>
           </div>
@@ -180,6 +181,9 @@
           <div class="row">
             <div class="col-lg-12 mb-2">
               <h6 class="c-text-size page3-head">
+                <strong>
+                  Menampilkan postingan yang sesuai dengan "html"
+                </strong>
                 <strong> "html" sözcüğü için bulunan sonuçlar </strong>
               </h6>
             </div>
@@ -195,7 +199,7 @@
                 <div class="card-body">
                   <h6 class="c-color2 card2-text1">In Label</h6>
                   <strong class="card2-text2">
-                    <a href="../html/detail.html" class="border-text2">
+                    <a href="detail.html" class="border-text2">
                       Ini Adalah Judul Artikel
                     </a>
                   </strong>
@@ -227,73 +231,7 @@
                 <div class="card-body">
                   <h6 class="c-color2 card2-text1">In Label</h6>
                   <strong class="card2-text2">
-                    <a href="../html/detail.html" class="border-text2">
-                      Ini Adalah Judul Artikel
-                    </a>
-                  </strong>
-                  <h6 class="text-dark card2-text3">
-                    By
-                    <span class="text-opacity-75 text-dark">
-                      Ridho Satriawan</span
-                    >
-                  </h6>
-                  <p class="card-text card2-text4">
-                    Apa itu HTML ? Buat kamu yang pernah membuat sebuah website
-                    pastinya sudah tidak asing lagi dengah yang namanya Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit. Illo ex
-                    veritatis, ipsa tempora accusamus commodi architecto? Sunt
-                    voluptatem nihil quas ipsa corporis molestiae totam, debitis
-                    quo et saepe corrupti enim.
-                  </p>
-                  <small class="card2-text5">22 Agust 2022</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6 mt-2 container-fluid">
-              <div class="card border1 c-shadow w-100 h-100">
-                <img
-                  src="https://picsum.photos/id/1/55/27"
-                  class="card-img-top border1 w-100 h-100 img-fluid"
-                  alt="Güncel haberler 1. resim"
-                />
-                <div class="card-body">
-                  <h6 class="c-color2 card2-text1">In Label</h6>
-                  <strong class="card2-text2">
-                    <a href="../html/detail.html" class="border-text2">
-                      Ini Adalah Judul Artikel
-                    </a>
-                  </strong>
-                  <h6 class="text-dark card2-text3">
-                    By
-                    <span class="text-opacity-75 text-dark">
-                      Ridho Satriawan</span
-                    >
-                  </h6>
-                  <p class="card-text card2-text4">
-                    Apa itu HTML ? Buat kamu yang pernah membuat sebuah website
-                    pastinya sudah tidak asing lagi dengah yang namanya Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit. Illo ex
-                    veritatis, ipsa tempora accusamus commodi architecto? Sunt
-                    voluptatem nihil quas ipsa corporis molestiae totam, debitis
-                    quo et saepe corrupti enim.
-                  </p>
-                  <small class="card2-text5">22 Agust 2022</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 mt-2 container-fluid">
-              <div class="card border1 c-shadow w-100 h-100">
-                <img
-                  src="https://picsum.photos/id/1/55/27"
-                  class="card-img-top border1 w-100 h-100 img-fluid"
-                  alt="Güncel haberler 1. resim"
-                />
-                <div class="card-body">
-                  <h6 class="c-color2 card2-text1">In Label</h6>
-                  <strong class="card2-text2">
-                    <a href="../html/detail.html" class="border-text2">
+                    <a href="detail.html" class="border-text2">
                       Ini Adalah Judul Artikel
                     </a>
                   </strong>
@@ -327,7 +265,7 @@
                 <div class="card-body">
                   <h6 class="c-color2 card2-text1">In Label</h6>
                   <strong class="card2-text2">
-                    <a href="../html/detail.html" class="border-text2">
+                    <a href="detail.html" class="border-text2">
                       Ini Adalah Judul Artikel
                     </a>
                   </strong>
@@ -359,7 +297,73 @@
                 <div class="card-body">
                   <h6 class="c-color2 card2-text1">In Label</h6>
                   <strong class="card2-text2">
-                    <a href="../html/detail.html" class="border-text2">
+                    <a href="detail.html" class="border-text2">
+                      Ini Adalah Judul Artikel
+                    </a>
+                  </strong>
+                  <h6 class="text-dark card2-text3">
+                    By
+                    <span class="text-opacity-75 text-dark">
+                      Ridho Satriawan</span
+                    >
+                  </h6>
+                  <p class="card-text card2-text4">
+                    Apa itu HTML ? Buat kamu yang pernah membuat sebuah website
+                    pastinya sudah tidak asing lagi dengah yang namanya Lorem,
+                    ipsum dolor sit amet consectetur adipisicing elit. Illo ex
+                    veritatis, ipsa tempora accusamus commodi architecto? Sunt
+                    voluptatem nihil quas ipsa corporis molestiae totam, debitis
+                    quo et saepe corrupti enim.
+                  </p>
+                  <small class="card2-text5">22 Agust 2022</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 mt-2 container-fluid">
+              <div class="card border1 c-shadow w-100 h-100">
+                <img
+                  src="https://picsum.photos/id/1/55/27"
+                  class="card-img-top border1 w-100 h-100 img-fluid"
+                  alt="Güncel haberler 1. resim"
+                />
+                <div class="card-body">
+                  <h6 class="c-color2 card2-text1">In Label</h6>
+                  <strong class="card2-text2">
+                    <a href="detail.html" class="border-text2">
+                      Ini Adalah Judul Artikel
+                    </a>
+                  </strong>
+                  <h6 class="text-dark card2-text3">
+                    By
+                    <span class="text-opacity-75 text-dark">
+                      Ridho Satriawan</span
+                    >
+                  </h6>
+                  <p class="card-text card2-text4">
+                    Apa itu HTML ? Buat kamu yang pernah membuat sebuah website
+                    pastinya sudah tidak asing lagi dengah yang namanya Lorem,
+                    ipsum dolor sit amet consectetur adipisicing elit. Illo ex
+                    veritatis, ipsa tempora accusamus commodi architecto? Sunt
+                    voluptatem nihil quas ipsa corporis molestiae totam, debitis
+                    quo et saepe corrupti enim.
+                  </p>
+                  <small class="card2-text5">22 Agust 2022</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mt-2 container-fluid">
+              <div class="card border1 c-shadow w-100 h-100">
+                <img
+                  src="https://picsum.photos/id/1/55/27"
+                  class="card-img-top border1 w-100 h-100 img-fluid"
+                  alt="Güncel haberler 1. resim"
+                />
+                <div class="card-body">
+                  <h6 class="c-color2 card2-text1">In Label</h6>
+                  <strong class="card2-text2">
+                    <a href="detail.html" class="border-text2">
                       Ini Adalah Judul Artikel
                     </a>
                   </strong>
@@ -386,9 +390,7 @@
         <!-- ASIDE-START -->
         <aside class="col-lg-4 d-none d-lg-block d-flex align-content-between">
           <h6 class="c-bg-color1 border1 c-shadow aside-font green-border">
-            <a href="../html/detail.html" class="border-text"
-              >Popüler Haberler</a
-            >
+            <a href="list.html" class="border-text">Popüler Haberler</a>
             <!--tam karşılıgını bulamadım-->
           </h6>
           <div class="card mb-3 c-shadow">
@@ -404,7 +406,7 @@
                 <div class="card-body">
                   <h5 class="card1-text1">
                     <strong>
-                      <a href="../html/detail.html" class="border-text2">
+                      <a href="detail.html" class="border-text2">
                         Ini Adalah Judul Artikel
                       </a>
                     </strong>
@@ -429,7 +431,7 @@
                 <div class="card-body">
                   <h5 class="card1-text1">
                     <strong>
-                      <a href="../html/detail.html" class="border-text2">
+                      <a href="detail.html" class="border-text2">
                         Ini Adalah Judul Artikel
                       </a>
                     </strong>
@@ -454,7 +456,7 @@
                 <div class="card-body">
                   <h5 class="card1-text1">
                     <strong>
-                      <a href="../html/detail.html" class="border-text2">
+                      <a href="detail.html" class="border-text2">
                         Ini Adalah Judul Artikel dsfdsfdsfds Lorem ipsum dolor
                         sit amet consectetur adipisicing elit. Nisi perferendis
                         reiciendis similique iure debitis adipisci repellat!
@@ -479,7 +481,7 @@
             <div class="col-12">
               <div class="c-bg-color1 border1">
                 <h6 class="text-light aside2-border-size green-border">
-                  <a href="../html/list.html" class="border-text">Kategori</a>
+                  <a href="list.html" class="border-text">Kategori</a>
                 </h6>
               </div>
               <div class="row mt-3">
@@ -500,14 +502,33 @@
     </div>
     <!-- CONTAINER-END -->
     <!-- MAIN-END -->
-
     <!-- FOOTER START -->
     <footer class="mt-5 p-1 c-bg-color1" style="text-align: center">
       <p class="text-light pt-3">omergunes2700@gmail.com</p>
     </footer>
     <!-- FOOTER END -->
-    <script src="./js/modal.js"></script>
     <script src="./js/search.js"></script>
+    <script type="text/javascript">
+      var deger;
+      var second = 11;
+      function secondStart() {
+        second--;
+        if (second >= 0) {
+          document.getElementById("counter").innerHTML = second;
+        } else {
+          window.clearInterval(deger);
+          document.getElementById("modalClose").click();
+          alert("Süreniz bitti!");
+        }
+      }
+      var deger = window.setInterval("secondStart()", 1000);
+    </script>
+    <script>
+      let announcement = new bootstrap.Modal(
+        document.querySelector("#announcement")
+      );
+      announcement.show();
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
