@@ -24,14 +24,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- HEADER-START -->
     <header class="c-bg-color1">
       <nav class="navbar navbar-expand-lg mx-5">
         <div class="container-fluid mx-5">
-          <a class="navbar-brand c-color3 header-font" href="home.html">
+          <a class="navbar-brand c-color3 header-font" href="../html/home.html">
             Ömer Güneş
           </a>
           <button
@@ -50,13 +50,20 @@
             id="navbarNavAltMarkup"
           >
             <div class="navbar-nav header-font2">
-              <a class="nav-link c-color3" aria-current="page" href="home.html"
+              <a
+                class="nav-link c-color3"
+                aria-current="page"
+                href="../html/home.html"
                 >Ana Sayfa</a
               >
-              <a class="nav-link c-color3" href="detail.html">Eğitim</a>
-              <a class="nav-link c-color3" href="detail.html">Programlama</a>
-              <a class="nav-link c-color3" href="list.html">Teknoloji</a>
-              <a class="nav-link c-color3" href="#">
+              <a class="nav-link c-color3" href="../html/detail.html">Eğitim</a>
+              <a class="nav-link c-color3" href="../html/detail.html"
+                >Programlama</a
+              >
+              <a class="nav-link c-color3" href="../html/list.html"
+                >Teknoloji</a
+              >
+              <a class="nav-link c-color3">
                 <i
                   class="fa-solid fa-magnifying-glass"
                   id="navbarOpen"
@@ -87,18 +94,18 @@
           <button
             type="button"
             class="btn-close text-reset"
-            data-bs-dismiss="offcanvas"
             id="closeBtn"
+            data-bs-dismiss="offcanvas"
             aria-label="Close"
           ></button>
         </div>
         <div class="offcanvas-body">
-          <form action="search.html" method="get">
+          <form action="../html/search.html" method="get">
             <div class="input-group">
               <input
-                name="searchTerm"
                 type="text"
                 class="form-control"
+                name="searchTerm"
                 placeholder="Aranan kelimeyi yazın..."
                 aria-label="Input group example"
                 aria-describedby="btnGroupAddon2"
@@ -115,23 +122,69 @@
     </header>
     <!-- HEADER-END -->
     <!-- MAIN-START -->
-    <!--CONTAINER-START -->
-    <div class="container pt-5 footerHeight">
+    <div class="container">
       <div class="row">
-        <article class="col-12 col-lg-8 mb-5">
-          <div class="notFoundPage">
-            <img src="./img/error.jpg" class="w-100" alt="not found" />
+        <div class="col">
+          <div
+            class="modal fade"
+            tabindex="-1"
+            id="announcement"
+            data-bs-backdrop="static"
+          >
+            <!-- data-bs-backdrop="static" = bu kod sayfanın herhangi yerine tıklayınca kapanmasına izin vermiyor -->
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content modal-img">
+                <div class="modal-header">
+                  <h5 class="modal-title">Cumhuriyet Bayramı mesajı</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <p class="cmodal-text">
+                    Cumhuriyet Bayramınız kutlu olsun
+                    <img src="./img/bayrak.jpg" alt="bayrak" height="24px" />
+                  </p>
+                </div>
+                <div class="modal-footer cmodal-btn">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    style="opacity: 0.8"
+                    data-bs-dismiss="modal"
+                  >
+                    Kapat
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn1 btn-success"
+                    data-bs-dismiss="modal"
+                    style="opacity: 0.8"
+                  >
+                    Onayla
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row searchResultRow d-none">
+        </div>
+      </div>
+    </div>
+    <!--CONTAINER-START -->
+    <div class="container mt-5">
+      <div class="row">
+        <article class="col-12 col-lg-8">
+          <div class="row">
             <div class="col-lg-12 mb-2">
               <h6 class="c-text-size page3-head">
-                <strong>
-                  "<span id="searchTermHolder"></span>" terimi için sonuçlar
-                </strong>
+                <strong> "html" sözcüğü için bulunan sonuçlar </strong>
               </h6>
             </div>
           </div>
-          <div class="row searchResultRow d-none">
+          <div class="row">
             <div class="col-sm-6 mt-2 container-fluid">
               <div class="card border1 c-shadow w-100 h-100">
                 <img
@@ -142,7 +195,7 @@
                 <div class="card-body">
                   <h6 class="c-color2 card2-text1">In Label</h6>
                   <strong class="card2-text2">
-                    <a href="detail.html" class="border-text2">
+                    <a href="../html/detail.html" class="border-text2">
                       Ini Adalah Judul Artikel
                     </a>
                   </strong>
@@ -174,73 +227,7 @@
                 <div class="card-body">
                   <h6 class="c-color2 card2-text1">In Label</h6>
                   <strong class="card2-text2">
-                    <a href="detail.html" class="border-text2">
-                      Ini Adalah Judul Artikel
-                    </a>
-                  </strong>
-                  <h6 class="text-dark card2-text3">
-                    By
-                    <span class="text-opacity-75 text-dark">
-                      Ridho Satriawan</span
-                    >
-                  </h6>
-                  <p class="card-text card2-text4">
-                    Apa itu HTML ? Buat kamu yang pernah membuat sebuah website
-                    pastinya sudah tidak asing lagi dengah yang namanya Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit. Illo ex
-                    veritatis, ipsa tempora accusamus commodi architecto? Sunt
-                    voluptatem nihil quas ipsa corporis molestiae totam, debitis
-                    quo et saepe corrupti enim.
-                  </p>
-                  <small class="card2-text5">22 Agust 2022</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row searchResultRow d-none">
-            <div class="col-sm-6 mt-2 container-fluid">
-              <div class="card border1 c-shadow w-100 h-100">
-                <img
-                  src="https://picsum.photos/id/1/55/27"
-                  class="card-img-top border1 w-100 h-100 img-fluid"
-                  alt="Güncel haberler 1. resim"
-                />
-                <div class="card-body">
-                  <h6 class="c-color2 card2-text1">In Label</h6>
-                  <strong class="card2-text2">
-                    <a href="detail.html" class="border-text2">
-                      Ini Adalah Judul Artikel
-                    </a>
-                  </strong>
-                  <h6 class="text-dark card2-text3">
-                    By
-                    <span class="text-opacity-75 text-dark">
-                      Ridho Satriawan</span
-                    >
-                  </h6>
-                  <p class="card-text card2-text4">
-                    Apa itu HTML ? Buat kamu yang pernah membuat sebuah website
-                    pastinya sudah tidak asing lagi dengah yang namanya Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit. Illo ex
-                    veritatis, ipsa tempora accusamus commodi architecto? Sunt
-                    voluptatem nihil quas ipsa corporis molestiae totam, debitis
-                    quo et saepe corrupti enim.
-                  </p>
-                  <small class="card2-text5">22 Agust 2022</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 mt-2 container-fluid">
-              <div class="card border1 c-shadow w-100 h-100">
-                <img
-                  src="https://picsum.photos/id/1/55/27"
-                  class="card-img-top border1 w-100 h-100 img-fluid"
-                  alt="Güncel haberler 1. resim"
-                />
-                <div class="card-body">
-                  <h6 class="c-color2 card2-text1">In Label</h6>
-                  <strong class="card2-text2">
-                    <a href="detail.html" class="border-text2">
+                    <a href="../html/detail.html" class="border-text2">
                       Ini Adalah Judul Artikel
                     </a>
                   </strong>
@@ -263,7 +250,7 @@
               </div>
             </div>
           </div>
-          <div class="row searchResultRow d-none">
+          <div class="row">
             <div class="col-sm-6 mt-2 container-fluid">
               <div class="card border1 c-shadow w-100 h-100">
                 <img
@@ -274,7 +261,7 @@
                 <div class="card-body">
                   <h6 class="c-color2 card2-text1">In Label</h6>
                   <strong class="card2-text2">
-                    <a href="detail.html" class="border-text2">
+                    <a href="../html/detail.html" class="border-text2">
                       Ini Adalah Judul Artikel
                     </a>
                   </strong>
@@ -306,7 +293,73 @@
                 <div class="card-body">
                   <h6 class="c-color2 card2-text1">In Label</h6>
                   <strong class="card2-text2">
-                    <a href="detail.html" class="border-text2">
+                    <a href="../html/detail.html" class="border-text2">
+                      Ini Adalah Judul Artikel
+                    </a>
+                  </strong>
+                  <h6 class="text-dark card2-text3">
+                    By
+                    <span class="text-opacity-75 text-dark">
+                      Ridho Satriawan</span
+                    >
+                  </h6>
+                  <p class="card-text card2-text4">
+                    Apa itu HTML ? Buat kamu yang pernah membuat sebuah website
+                    pastinya sudah tidak asing lagi dengah yang namanya Lorem,
+                    ipsum dolor sit amet consectetur adipisicing elit. Illo ex
+                    veritatis, ipsa tempora accusamus commodi architecto? Sunt
+                    voluptatem nihil quas ipsa corporis molestiae totam, debitis
+                    quo et saepe corrupti enim.
+                  </p>
+                  <small class="card2-text5">22 Agust 2022</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 mt-2 container-fluid">
+              <div class="card border1 c-shadow w-100 h-100">
+                <img
+                  src="https://picsum.photos/id/1/55/27"
+                  class="card-img-top border1 w-100 h-100 img-fluid"
+                  alt="Güncel haberler 1. resim"
+                />
+                <div class="card-body">
+                  <h6 class="c-color2 card2-text1">In Label</h6>
+                  <strong class="card2-text2">
+                    <a href="../html/detail.html" class="border-text2">
+                      Ini Adalah Judul Artikel
+                    </a>
+                  </strong>
+                  <h6 class="text-dark card2-text3">
+                    By
+                    <span class="text-opacity-75 text-dark">
+                      Ridho Satriawan</span
+                    >
+                  </h6>
+                  <p class="card-text card2-text4">
+                    Apa itu HTML ? Buat kamu yang pernah membuat sebuah website
+                    pastinya sudah tidak asing lagi dengah yang namanya Lorem,
+                    ipsum dolor sit amet consectetur adipisicing elit. Illo ex
+                    veritatis, ipsa tempora accusamus commodi architecto? Sunt
+                    voluptatem nihil quas ipsa corporis molestiae totam, debitis
+                    quo et saepe corrupti enim.
+                  </p>
+                  <small class="card2-text5">22 Agust 2022</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 mt-2 container-fluid">
+              <div class="card border1 c-shadow w-100 h-100">
+                <img
+                  src="https://picsum.photos/id/1/55/27"
+                  class="card-img-top border1 w-100 h-100 img-fluid"
+                  alt="Güncel haberler 1. resim"
+                />
+                <div class="card-body">
+                  <h6 class="c-color2 card2-text1">In Label</h6>
+                  <strong class="card2-text2">
+                    <a href="../html/detail.html" class="border-text2">
                       Ini Adalah Judul Artikel
                     </a>
                   </strong>
@@ -332,8 +385,10 @@
         </article>
         <!-- ASIDE-START -->
         <aside class="col-lg-4 d-none d-lg-block d-flex align-content-between">
-          <h6 class="c-bg-color1 border1 p-1 c-shadow aside-font green-border">
-            <a href="list.html" class="border-text">Popüler Haberler</a>
+          <h6 class="c-bg-color1 border1 c-shadow aside-font green-border">
+            <a href="../html/detail.html" class="border-text"
+              >Popüler Haberler</a
+            >
             <!--tam karşılıgını bulamadım-->
           </h6>
           <div class="card mb-3 c-shadow">
@@ -349,7 +404,7 @@
                 <div class="card-body">
                   <h5 class="card1-text1">
                     <strong>
-                      <a href="detail.html" class="border-text2">
+                      <a href="../html/detail.html" class="border-text2">
                         Ini Adalah Judul Artikel
                       </a>
                     </strong>
@@ -374,7 +429,7 @@
                 <div class="card-body">
                   <h5 class="card1-text1">
                     <strong>
-                      <a href="detail.html" class="border-text2">
+                      <a href="../html/detail.html" class="border-text2">
                         Ini Adalah Judul Artikel
                       </a>
                     </strong>
@@ -399,7 +454,7 @@
                 <div class="card-body">
                   <h5 class="card1-text1">
                     <strong>
-                      <a href="detail.html" class="border-text2">
+                      <a href="../html/detail.html" class="border-text2">
                         Ini Adalah Judul Artikel dsfdsfdsfds Lorem ipsum dolor
                         sit amet consectetur adipisicing elit. Nisi perferendis
                         reiciendis similique iure debitis adipisci repellat!
@@ -423,8 +478,8 @@
           <div class="row">
             <div class="col-12">
               <div class="c-bg-color1 border1">
-                <h6 class="text-light aside2-border-size pt-1 green-border">
-                  <a href="list.html" class="border-text">Kategori</a>
+                <h6 class="text-light aside2-border-size green-border">
+                  <a href="../html/list.html" class="border-text">Kategori</a>
                 </h6>
               </div>
               <div class="row mt-3">
@@ -443,12 +498,11 @@
         <!-- ASIDE-END -->
       </div>
     </div>
-
     <!-- CONTAINER-END -->
     <!-- MAIN-END -->
 
     <!-- FOOTER START -->
-    <footer class="p-1 c-bg-color1">
+    <footer class="mt-5 p-1 c-bg-color1" style="text-align: center">
       <p class="text-light pt-3">omergunes2700@gmail.com</p>
     </footer>
     <!-- FOOTER END -->

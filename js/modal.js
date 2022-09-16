@@ -1,9 +1,9 @@
 function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(";");
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i];
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
     while (c.charAt(0) == " ") {
       c = c.substring(1);
     }
@@ -16,18 +16,15 @@ function getCookie(cname) {
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  let expires = "expires=" + d.toUTCString();
+  var expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 var modalAnnouncement = document.getElementById("announcement");
-modalAnnouncement.addEventListener("hidden.bs.modal", function (event) {
-  // do something...
-  setCookie("modal", "true");
-});
-
+// modalAnnouncement.addEventListener("hidden.bs.modal", function (event) {
+//    setCookie("modal", "true");
+// });
+console.log(getCookie("modal"));
 if (getCookie("modal") == "") {
-  let announcement = new bootstrap.Modal(
-    document.querySelector("#announcement")
-  );
+  var announcement = new bootstrap.Modal(modalAnnouncement);
   announcement.show();
 }
