@@ -181,9 +181,6 @@
           <div class="row">
             <div class="col-lg-12 mb-2">
               <h6 class="c-text-size page3-head">
-                <strong>
-                  Menampilkan postingan yang sesuai dengan "html"
-                </strong>
                 <strong> "html" sözcüğü için bulunan sonuçlar </strong>
               </h6>
             </div>
@@ -507,10 +504,10 @@
       <p class="text-light pt-3">omergunes2700@gmail.com</p>
     </footer>
     <!-- FOOTER END -->
-    <script src="./js/search.js"></script>
+    <script src="../js/search.js"></script>
     <script type="text/javascript">
       var deger;
-      var second = 11;
+      var second = 1;
       function secondStart() {
         second--;
         if (second >= 0) {
@@ -518,13 +515,15 @@
         } else {
           window.clearInterval(deger);
           document.getElementById("modalClose").click();
-          alert("Süreniz bitti!");
+          alert(
+            "30 AGUSTOS CUMHURİYET BAYRAMINIZ KUTLU OLSUN!                      bildirimi kapatmak ister misiniz?"
+          );
         }
       }
       var deger = window.setInterval("secondStart()", 1000);
     </script>
     <script>
-      let announcement = new bootstrap.Modal(
+      var announcement = new bootstrap.Modal(
         document.querySelector("#announcement")
       );
       announcement.show();
