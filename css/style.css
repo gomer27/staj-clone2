@@ -266,12 +266,13 @@ small {
 }
 .counter {
   display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-items: center;
+  justify-content: end;
 }
 #counter {
   background-color: #02a08f;
+  color: #fff;
+  border-radius: 85px;
+  margin: 5px 0px;
   box-sizing: border-box;
   width: 65px;
   height: 35px;
@@ -280,9 +281,18 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
 }
-.warn {
-  background-color: white;
+#warn {
+  font-family: "Lobster", cursive;
+  background-color: #02a08f;
+  border-radius: 15px;
+  color: rgb(174, 7, 7);
+  font-size: 28px;
+  margin-left: auto;
+}
+.modal-title {
+  color: #02a08f;
 }
 .cmodal-btn {
   display: flex;
