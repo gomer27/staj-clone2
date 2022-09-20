@@ -516,12 +516,12 @@
     <script src="../js/search.js"></script>
     <script type="text/javascript">
       var deger;
-      var second = 3;
+      var second = 11;
       function counter() {
         second--;
         if (second >= 0) {
           document.getElementById("counter").innerHTML = second;
-        } else if (second >= -3) {
+        } else if (second >= -1) {
           document.getElementById("warn").innerHTML = "Süreniz bitti!";
         } else {
           window.clearInterval(deger);
