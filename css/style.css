@@ -264,15 +264,17 @@ small {
   border-radius: 15px;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
-.counter {
+.cmodal {
   display: flex;
-  justify-content: end;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 #counter {
   background-color: #02a08f;
   color: #fff;
   border-radius: 85px;
-  margin: 5px 0px;
+  margin-right: 15px;
   box-sizing: border-box;
   width: 65px;
   height: 35px;
@@ -281,7 +283,6 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
 }
 #warn {
   font-family: "Lobster", cursive;
@@ -289,14 +290,9 @@ small {
   border-radius: 15px;
   color: rgb(174, 7, 7);
   font-size: 28px;
-  margin-left: auto;
 }
 .modal-title {
   color: #02a08f;
-}
-.cmodal-btn {
-  display: flex;
-  justify-content: flex-start;
 }
 .cmodal-text {
   font-family: "Lobster", cursive;
